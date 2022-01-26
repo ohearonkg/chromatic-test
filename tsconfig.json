@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
     "target": "es5",
     "allowJs": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
     "strict": true,
     "module": "esnext",
     "esModuleInterop": true
