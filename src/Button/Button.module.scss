@@ -2,6 +2,8 @@
   padding: 10px 20px;
   border: 2px solid var(--button-border-color);
   background-color: var(--button-background-color);
+  color: var(--button-font-color);
+  transition: all 0.2s ease;
 
   &:not(:disabled) {
     cursor: pointer;
@@ -11,11 +13,13 @@
 .PrimaryButton {
   --button-background-color: green;
   --button-border-color: var(--button-background-color);
+  --button-font-color: white;
 
   &:not(:disabled) {
     &:hover,
     &:focus {
       --button-background-color: rgba(0, 255, 0, 0.5);
+      transform: scale(1.1);
     }
   }
 }
@@ -23,11 +27,13 @@
 .SecondaryButton {
   --button-background-color: red;
   --button-border-color: var(--button-background-color);
+  --button-font-color: white;
 
   &:not(:disabled) {
     &:hover,
     &:focus {
       --button-background-color: rgba(255, 0, 0, 0.5);
+      transform: scale(1.1);
     }
   }
 }
