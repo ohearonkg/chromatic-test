@@ -9,16 +9,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx$/,
+        test: /\.[tj]sx?$/i,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
+        use: "babel-loader",
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+          "sass-loader",
+        ],
       },
     ],
   },
   plugins: [new HtmlWebpackPlugin({ template: htmlTemplatePath })],
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js", ".scss", ".css", ".sass"],
   },
 };
