@@ -1,6 +1,16 @@
 {
-  "extends": "../tsconfig",
   "compilerOptions": {
-    "types": ["cypress", "@testing-library/cypress", "react"]
-  }
+    "target": "es5",
+    "lib": [
+      "es5",
+      "dom"
+    ],
+    "types": [
+      "cypress",
+      "@testing-library/cypress"
+    ]
+  },
+  "include": [
+    "**/*.ts"
+  ]
 }

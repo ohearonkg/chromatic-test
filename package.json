@@ -19,7 +19,6 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@cypress/react": "^5.12.1",
     "@cypress/webpack-dev-server": "^1.8.0",
     "@storybook/addon-actions": "^6.4.14",
     "@storybook/addon-essentials": "^6.4.14",
@@ -28,7 +27,7 @@
     "@storybook/react": "^6.4.14",
     "@storybook/testing-react": "^1.2.3",
     "@testing-library/cypress": "^8.0.2",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/user-event": "^14.0.0-beta",
     "@types/node": "^17.0.12",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
@@ -36,6 +35,7 @@
     "classnames": "^2.3.1",
     "css-loader": "^6.5.1",
     "cypress": "^9.3.1",
+    "cypress-real-events": "^1.6.0",
     "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.5.1",
     "sass": "^1.49.0",
@@ -48,6 +48,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@cypress/react": "^5.12.1",
     "@storybook/addon-links": "^6.4.14",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

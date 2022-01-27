@@ -7,8 +7,18 @@ const { Primary, Secondary } = composeStories(stories);
 
 describe("Button", () => {
   context("Primary Button", () => {
-    it("Should render", () => {
+    it("Should handle hover", () => {
       mount(<Primary />);
+
+      cy.findByRole("button").realHover();
     });
+  });
+
+  context("Secondary Button", () => {
+    it("Should handle hover", () => {
+      mount(<Secondary />);
+
+      cy.findByRole("button").realHover();
+    })
   });
 });

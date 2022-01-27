@@ -6,7 +6,15 @@
     "moduleResolution": "node",
     "strict": true,
     "module": "esnext",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": [
+      "react"
+      "cypress",
+      "@testing-library/cypress",
+      "cypress-real-events"
+    ]
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }
