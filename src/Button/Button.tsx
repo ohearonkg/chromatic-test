@@ -7,7 +7,7 @@ export enum ButtonType {
   SECONDARY,
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   buttonType?: ButtonType;
 }
 
