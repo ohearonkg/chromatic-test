@@ -1,6 +1,6 @@
 import React from "react";
-import { userEvent, within } from '@storybook/testing-library';
-import { ComponentMeta } from "@storybook/react";
+import { userEvent, within } from "@storybook/testing-library";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Button, ButtonProps, ButtonType } from "./Button";
 
 export default {
@@ -8,14 +8,18 @@ export default {
   component: Button,
 } as ComponentMeta<typeof Button>;
 
-const Template = (args:ButtonProps) => <Button {...args} />
+const Template: ComponentStory<typeof Button> = (args: ButtonProps) => (
+  <Button {...args} />
+);
 
-export const PrimaryHover = Template.bind({buttonType: ButtonType.PRIMARY})
+export const PrimaryHover = Template.bind({});
+PrimaryHover.args = {
+  buttonType: ButtonType.PRIMARY,
+  children: <span> Hello World </span>,
+};
 
-// @ts-ignore
 PrimaryHover.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  await userEvent.hover(canvas.getByRole('button'))
-}
-
+  await userEvent.hover(canvas.getByRole("button"));
+};

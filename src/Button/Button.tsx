@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes, FC } from "react";
 import styles from "./Button.module.scss";
 import classNames from "classnames/bind";
 
@@ -8,12 +8,15 @@ export enum ButtonType {
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  /**
+   * The type of button
+   */
   buttonType?: ButtonType;
 }
 
 const cx = classNames.bind(styles);
 
-const Button: React.FC<ButtonProps> = ({
+const Button: FC<ButtonProps> = ({
   children,
   buttonType = ButtonType.PRIMARY,
   ...props
