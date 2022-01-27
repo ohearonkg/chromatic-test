@@ -1,6 +1,6 @@
 import React from "react";
-import { userEvent, within } from "@storybook/testing-library";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { within, userEvent } from "@storybook/testing-library";
 import { Button, ButtonProps, ButtonType } from "./Button";
 
 export default {
@@ -12,14 +12,39 @@ const Template: ComponentStory<typeof Button> = (args: ButtonProps) => (
   <Button {...args} />
 );
 
+/**
+ * Primary Button
+ */
+export const Primary = Template.bind({});
+Primary.args = {
+  buttonType: ButtonType.PRIMARY,
+  children: "PRIMARY BUTTON",
+};
+
+/**
+ * Primary Button Hover
+ */
 export const PrimaryHover = Template.bind({});
 PrimaryHover.args = {
   buttonType: ButtonType.PRIMARY,
-  children: <span> Hello World </span>,
+  children: "PRIMARY BUTTON HOVER",
+};
+PrimaryHover.parameters = {
+  pseudo: {
+    hover: true,
+  },
 };
 
-PrimaryHover.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
+/**
+ * Primary Button Focus
+ */
+export const PrimaryFocus = Template.bind({});
+PrimaryFocus.args = {
+  buttonType: ButtonType.PRIMARY,
+  children: "PRIMARY BUTTON FOCUS",
+};
 
-  await userEvent.hover(canvas.getByRole("button"));
+PrimaryFocus.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  canvas.getByRole("button").focus();
 };
