@@ -18,14 +18,8 @@
 // eslint-disable-next-line no-unused-vars
 // Do we need this?
 // Do we need the react @cypress/react stuff?
-const webpackPreprocessor = require("@cypress/webpack-preprocessor");
 const { startDevServer } = require("@cypress/webpack-dev-server");
 const webpackConfig = require("../../webpack.config");
-
-const preprocessorOptions = {
-  webpackOptions: webpackConfig,
-  watchOptions: {},
-};
 
 module.exports = (on) => {
   on("dev-server:start", async (options) =>
