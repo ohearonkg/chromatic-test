@@ -7,5 +7,6 @@
     "strict": true,
     "module": "esnext",
     "esModuleInterop": true
-  }
+  },
+  "include": ["src"]
 }
