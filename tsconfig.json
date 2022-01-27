@@ -7,11 +7,12 @@
     "strict": true,
     "module": "esnext",
     "esModuleInterop": true,
-    "types": [
+    "types": [ 
       "react"
       "cypress",
       "@testing-library/cypress",
       "cypress-real-events"
+      "cypress-axe"
     ]
   },
   "include": [
